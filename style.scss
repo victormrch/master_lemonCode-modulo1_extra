@@ -1,4 +1,55 @@
-html {
-  padding: 0;
-  margin: 0;
+@import "_mixins.scss";
+@import "_base.scss";
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: $toolbarHeight;
+  background-color: $primaryColor;
+}
+input {
+  width: 40%;
+  height: 40%;
+  margin-left: 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: "Orelega One", cursive;
+  font-size: 20px;
+  color: $textColor;
+  border: 1px solid $primaryColor;
+  &:focus {
+    outline: none;
+    border: 1px solid $textColor;
+    &::placeholder {
+      color: transparent;
+    }
+  }
+}
+.logo {
+  width: $logoWidth;
+  height: $logoHeight;
+  background-image: url(/images/logo.png);
+  background-size: cover;
+}
+.page-title {
+  color: $textColor;
+  background-color: $secundaryColor;
+  font-size: $pageTitleFontSize;
+  height: $pageTitleHeight;
+  @include centerTextInBox;
+}
+
+@media screen and (max-width: 768px) {
+  input {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  input {
+    width: 67%;
+    font-size: 18px;
+  }
 }

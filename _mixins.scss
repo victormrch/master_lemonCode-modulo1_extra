@@ -1,0 +1,4 @@
+@mixin centerTextInBox {
+  display: grid;
+  place-items: center center;
+}
