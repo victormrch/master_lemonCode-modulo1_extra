@@ -1,0 +1,13 @@
+@mixin centerTextInBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin centerTextInMenu {
+  display: flex;
+  align-items: center;
+  i {
+    margin: 5px 10px;
+  }
+}
